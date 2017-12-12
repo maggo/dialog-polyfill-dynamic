@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "/dialog-polyfill-dynamic/",
   "scripts": {
     "start": "poi",
     "build": "poi build"
