@@ -1,0 +1,19 @@
+{
+  "name": "dialog-polyfill-dynamic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "poi",
+    "build": "poi build"
+  },
+  "poi": {
+    "dist": "docs"
+  },
+  "dependencies": {
+    "dialog-polyfill": "0.4.9"
+  },
+  "devDependencies": {
+    "poi": "9.5.11"
+  }
+}
