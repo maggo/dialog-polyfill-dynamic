@@ -7,14 +7,13 @@ const setUpApp = () => {
 };
 
 if (window.HTMLDialogElement === undefined) {
-  console.log('No dialog present');
+  console.log('No native dialog support! Loading polyfill…');
   
   import('dialog-polyfill').then(dialogPolyfill => {
-    console.log('dialog loaded', dialogPolyfill);
     Array.from(document.getElementsByTagName('dialog')).forEach(dialog => {
       dialogPolyfill.registerDialog(dialog);
     });
-    console.log('dialogs polyfilled!');
+    console.log('dialog polyfill loaded!');
     setUpApp();
   });
 } else {
