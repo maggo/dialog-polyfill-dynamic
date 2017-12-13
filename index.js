@@ -8,14 +8,18 @@ const setUpApp = () => {
 
 if (window.HTMLDialogElement === undefined) {
   console.log('No native dialog support! Loading polyfill…');
-  
-  import(/* webpackChunkName: "dialog-polyfill" */ 'dialog-polyfill').then(dialogPolyfill => {
+  Promise.all([
+    import(/* webpackChunkName: "dialog-polyfill" */ 'dialog-polyfill'),
+    import(/* webpackChunkName: "dialog-polyfill" */ 'dialog-polyfill/dialog-polyfill.css'),
+  ]).then(([dialogPolyfill]) => {
     Array.from(document.getElementsByTagName('dialog')).forEach(dialog => {
       dialogPolyfill.registerDialog(dialog);
     });
     console.log('dialog polyfill loaded!');
     setUpApp();
   });
+  
+  
 } else {
   setUpApp();
 }

@@ -11,10 +11,20 @@
   </head>
   <body>
     <dialog id="dialog">
-      I'm a dialog hurr durr
+      Yay!!
       <button id="dialog-close">Close dialog</button>
     </dialog>
-    <p>Foo</p>
+    <h1>Dynamic polyfill loading with <code>import()</code></h1>
+    <p>
+      This page will load the <a href="https://github.com/GoogleChrome/dialog-polyfill">dialog-polyfill</a> automatically only if your browser does not <a href="https://caniuse.com/#feat=dialog">support</a> it natively.<br>
+    </p>
+    <p>
+      Some browsers like Safari will shortly flash the dialog as its not natively hidden.<br>
+      The required css for the polyfill is included with the chunk and applied after the async load.
+    </p>
+    <p>
+      Repo: <a href="https://github.com/maggo/dialog-polyfill-dynamic">https://github.com/maggo/dialog-polyfill-dynamic</a>
+    </p>
     <button id="dialog-toggle">Open dialog</button>
   </body>
 </html>
