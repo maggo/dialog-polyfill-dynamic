@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "homepage": "/dialog-polyfill-dynamic/",
+  "homepage": "https://maggo.github.io/dialog-polyfill-dynamic/",
   "scripts": {
     "start": "poi",
     "build": "poi build"
   },
   "poi": {
-    "dist": "docs"
+    "dist": "docs",
+    "homepage": "/dialog-polyfill-dynamic/"
   },
   "dependencies": {
     "dialog-polyfill": "0.4.9"
