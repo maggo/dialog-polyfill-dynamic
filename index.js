@@ -9,7 +9,7 @@ const setUpApp = () => {
 if (window.HTMLDialogElement === undefined) {
   console.log('No native dialog support! Loading polyfill…');
   
-  import('dialog-polyfill').then(dialogPolyfill => {
+  import(/* webpackChunkName: "dialog-polyfill" */ 'dialog-polyfill').then(dialogPolyfill => {
     Array.from(document.getElementsByTagName('dialog')).forEach(dialog => {
       dialogPolyfill.registerDialog(dialog);
     });
